@@ -1,0 +1,23 @@
+{
+  "name": "darkhorse",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
+  },
+  "dependencies": {
+    "@inco/lightning": "1.0.2",
+    "ds-test": "github:dapphub/ds-test",
+    "forge-std": "github:foundry-rs/forge-std"
+  },
+  "version": "1.0.0",
+  "scripts": {
+    "test": "forge test -vv",
+    "build": "forge build",
+    "deploy:testnet": "forge script script/Deploy.s.sol --rpc-url base_sepolia --broadcast --private-key $PRIVATE_KEY_BASE_SEPOLIA",
+    "frontend:dev": "bun run --cwd frontend dev",
+    "frontend:build": "bun run --cwd frontend build"
+  }
+}
